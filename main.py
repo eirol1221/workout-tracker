@@ -26,8 +26,6 @@ nutri_response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/
 print(nutri_response.json())
 exercise_details = nutri_response.json()['exercises']
 
-exercise_list = {}
-
 for item in exercise_details:
     sheety_header = {
         "Content-Type": "application/json",
